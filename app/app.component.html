@@ -1,0 +1,27 @@
+
+
+    <div class="header">
+        <a href="#menu"><span></span></a>
+				CostTrack
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <nav id="menu">			
+        <ul>
+            <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+            <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/products']">Products</a></li>
+            <li><span>Classificators</span>
+                <ul>
+                    <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/producut-name-classificator']">Product Name</a></li>
+                    <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/brand-classificator']">Brand</a></li>
+                    <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/product-type-classificator']">Product Type</a></li>
+                </ul>
+            </li>
+            <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/reports']">Reports</a></li>
+            <li [routerLinkActive]="['mm-selected']"><a [routerLink]="['/profile']">Profile</a></li>
+            <li [routerLinkActive]="['mm-selected']"><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+
