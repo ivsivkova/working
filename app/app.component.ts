@@ -4,7 +4,7 @@ declare var jQuery: any;
 @Component({
   moduleId: module.id,
   selector: '[my-app]',
-  templateUrl: '../app/app.component.html'
+  templateUrl: '../../app/app.component.html'
 })
 
 export class AppComponent implements OnInit{

@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Brand } from './../../_models/brand.model';
+import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 @Component ({
     selector:'brand-class',
     templateUrl:'./../app/classificators/brand/brand.component.html'
 })
 
-export class BrandComponent {
+export class BrandComponent implements OnInit{
     brands: Brand[];
-    constructor(){
-        this.brands = [
-            new Brand(1,"Pilos"),
-            new Brand(2,"Vereia"),
-            new Brand(3,"Madjarov"),
-            new Brand(4,"Orehite")
-        ];
+    constructor( private http:Http){
+    }
+
+    takeBrands():void {
+        this.http.get("./../../../json/brands.json")
+        .subscribe((res:Response) => {
+            this.brands = res.json();
+        })
+    }
+
+    ngOnInit():void {
+        this.takeBrands();
     }
 
     createNewBrand(event):void {

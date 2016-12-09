@@ -1,0 +1,40 @@
+[
+    {
+        "id":1, 
+        "icon": "http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png",
+        "name": {
+            "id":1,
+            "name":"Milk" 
+        },
+        "brand": {
+            "id":1,
+            "name": "Pilos"
+        },
+        "singlePrice": 1.59,
+        "quantity": 2,
+        "productType": {
+            "id": 1,
+            "name": "Food"
+        },
+        "date": "Tue Apr 26 2016 00:00:00 GMT+0300 (FLE Daylight Time)"
+    },
+    {
+        "id":2, 
+        "icon": "http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png",
+        "name": {
+            "id":1,
+            "name":"Milk" 
+        },
+        "brand": {
+            "id":2,
+            "name": "Vereia"
+        },
+        "singlePrice": 1.69,
+        "quantity": 2,
+        "productType": {
+            "id": 1,
+            "name": "Food"
+        },
+        "date": "Tue Apr 26 2016 00:00:00 GMT+0300 (FLE Daylight Time)"
+    }
+]

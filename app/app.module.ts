@@ -1,4 +1,5 @@
 import { NgModule }      from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing }        from './app.routing';
 
@@ -18,7 +19,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { AppComponent }   from './app.component';
 @NgModule({
   imports:      [ 
-                  BrowserModule, 
+                  BrowserModule,
+                  HttpModule, 
                   routing,
                   ProductsModule,
                   ProductNameModule,

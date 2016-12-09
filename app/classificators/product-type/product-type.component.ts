@@ -1,19 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductTypeModel } from './../../_models/product-type.model';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
 @Component ({
     selector:'product-type',
     templateUrl: './../app/classificators/product-type/product-type.component.html'
 })
 
-export class ProductTypeComponent {
+export class ProductTypeComponent implements OnInit{
     productTypes: ProductTypeModel[];
-    constructor(){
-        this.productTypes = [
-            new ProductTypeModel(1, "Food"),
-            new ProductTypeModel(2, "Cleaning Supplies"),
-            new ProductTypeModel(3, "Technical equipment")
-        ];
+    constructor(private http:Http){
+    }
+
+    getProductTypeClassificators():void {
+        this.http.get("./../../../json/products-type.json")
+        .subscribe((res:Response) => {
+            this.productTypes = res.json();
+        })
+    }
+
+    ngOnInit():void {
+        this.getProductTypeClassificators();
     }
 
     createNewProductType(event):void {

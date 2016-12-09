@@ -4,6 +4,8 @@ import { Product } from './../_models/product.model';
 import { ProductNameModel } from './../_models/product-name.model';
 import { Brand } from './../_models/brand.model';
 import { ProductTypeModel } from './../_models/product-type.model';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import { OnInit } from '@angular/core';
 
 
 @Component({
@@ -11,14 +13,22 @@ import { ProductTypeModel } from './../_models/product-type.model';
   templateUrl: '../app/products/products.component.html'
 })
 
-export class ProductsComponent{
+export class ProductsComponent implements OnInit{
   initialProducts: Product[];
+  data:Object;
 
-  constructor () {
-        this.initialProducts = [
-            new Product(1,"http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png", new ProductNameModel(1,"Milk"), new Brand(1,"Pilos"), 1.59, 2, new ProductTypeModel(1,"Food"), new Date(2016,3,26)),
-            new Product(2,"http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png", new ProductNameModel(1,"Milk"), new Brand(2,"Vereia"), 1.69, 2, new ProductTypeModel(1,"Food"), new Date(2016,3,26))
-        ];
+  constructor (public http:Http) {       
+  }
+
+  makeRequest():void {
+    this.http.get('./../../json/products.json')
+      .subscribe((res: Response) => {
+        this.initialProducts = res.json();
+      })
+  }
+
+  ngOnInit():void {
+    this.makeRequest();
   }
 
   createProduct(event):void {
