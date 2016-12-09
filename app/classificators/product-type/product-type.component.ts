@@ -8,6 +8,8 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 })
 
 export class ProductTypeComponent implements OnInit{
+    createView:boolean = false;
+
     productTypes: ProductTypeModel[];
     constructor(private http:Http){
     }
@@ -24,7 +26,7 @@ export class ProductTypeComponent implements OnInit{
     }
 
     createNewProductType(event):void {
-        console.log('You will create new Product Type Classificator');
+        this.createView = true;
         event.preventDefault();
     }
 }

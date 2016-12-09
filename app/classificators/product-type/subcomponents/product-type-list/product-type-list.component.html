@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let currProdType of productsTypeList">
+            <td>{{currProdType.id}}</td>
+            <td>{{currProdType.name}}</td>
+        </tr>
+    </tbody>
+</table>

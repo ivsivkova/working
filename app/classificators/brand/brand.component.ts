@@ -9,6 +9,8 @@ import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 export class BrandComponent implements OnInit{
     brands: Brand[];
+    createView:boolean = false; 
+
     constructor( private http:Http){
     }
 
@@ -24,7 +26,7 @@ export class BrandComponent implements OnInit{
     }
 
     createNewBrand(event):void {
-        console.log('Almost done creating new Brand!');
+        this.createView = true;
         event.preventDefault();
     }
 }

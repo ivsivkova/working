@@ -8,6 +8,8 @@ import {Http, Response, RequestOptions, Headers} from '@angular/http';
 })
 
 export class ProductNameClassComponent implements OnInit{
+    createView:boolean = false;
+
     classificators: ProductNameModel[];
     constructor(private http: Http){
     }
@@ -24,7 +26,7 @@ export class ProductNameClassComponent implements OnInit{
     }
 
     createNewProductName(event):void {
-        console.log('Trying to cerate new Product Name Classificator ha?');
+        this.createView = true;
         event.preventDefault();
     }
 }

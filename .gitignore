@@ -40,7 +40,7 @@ dist
 .node_repl_history
 
 # compiled js and map files
-dist/**/*.js
-dist/**/*.js.map
+app/**/*.js
+app/**/*.js.map
 production/**/*.js
 production/**/*.js.map
