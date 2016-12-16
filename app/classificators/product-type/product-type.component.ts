@@ -29,4 +29,7 @@ export class ProductTypeComponent implements OnInit{
         this.createView = true;
         event.preventDefault();
     }
+    hideCreateProductType(boolCreate):void {
+        this.createView = boolCreate;
+    }
 }

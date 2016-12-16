@@ -29,4 +29,7 @@ export class ProductNameClassComponent implements OnInit{
         this.createView = true;
         event.preventDefault();
     }
+    hideCreateProductName(boolCreate):void {
+        this.createView = boolCreate;
+    }
 }

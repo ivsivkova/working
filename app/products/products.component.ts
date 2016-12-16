@@ -14,8 +14,8 @@ import { OnInit } from '@angular/core';
 })
 
 export class ProductsComponent implements OnInit{
+  createView:boolean = false;
   initialProducts: Product[];
-  data:Object;
 
   constructor (public http:Http) {       
   }
@@ -32,7 +32,10 @@ export class ProductsComponent implements OnInit{
   }
 
   createProduct(event):void {
-    console.log('Yay!You are trying to create new product!');
+    this.createView = true;
     event.preventDefault();
+  }
+  hideCreateView(boolCreate):void {
+    this.createView = boolCreate;
   }
 }

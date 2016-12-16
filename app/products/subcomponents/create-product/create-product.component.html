@@ -1,0 +1,24 @@
+<form>
+    <label>Name:</label>
+    <select>
+        <option value="">Please select name</option>
+        <option *ngFor="let currPN of productNameArray" value="{{currPN.id}}">{{currPN.name}}</option>
+    </select><br/>
+    <label>Brand:</label>
+    <select>
+        <option value="">Please select brand</option>
+        <option *ngFor="let currBrand of brandsArray" value="{{currBrand.id}}">{{currBrand.name}}</option>
+    </select><br/>
+    <label>Price per Item:</label>
+    <input type="text"/><br/>
+    <label>Quantity:</label>
+    <input type="text"/><br/>
+    <label>Product Type:</label>
+    <select>
+        <option value="">Please select product type</option>
+        <option *ngFor="let currProdType of productTypeArray" value="{{currProdType.id}}">{{currProdType.name}}</option>
+    </select>
+    <!-- To Do: To include datepicker -->
+    <button type="button" (click)='createProduct()'>Create</button>
+    <button type="button" (click)='createProductClose()'>Close</button>
+</form>

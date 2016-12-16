@@ -1,3 +1,4 @@
+<create-product *ngIf="createView" (closeCreateProduct)='hideCreateView($event)'></create-product>
 <a href="#" (click)="createProduct($event)">Create New Product</a>
 <h1>This is supposed to be Products List</h1>
 <product-list [productsList]="initialProducts"></product-list>

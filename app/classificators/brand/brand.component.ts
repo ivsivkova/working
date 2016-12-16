@@ -29,4 +29,8 @@ export class BrandComponent implements OnInit{
         this.createView = true;
         event.preventDefault();
     }
+
+    hideCreateBrand(boolCreate):void {
+        this.createView = boolCreate;
+    }
 }

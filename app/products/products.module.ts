@@ -7,6 +7,7 @@ import { ProductTotalPriceComponent } from './subcomponents/product-total-price/
 import { ProductItemComponent } from './subcomponents/product-item/product-item.component';
 import { ProductListComponent } from './subcomponents/product-list/product-list.component'; 
 import { ProductsComponent } from './products.component';
+import { CreateProductComponent } from './subcomponents/create-product/create-product.component';
 
 @NgModule({
     imports:[CommonModule],
@@ -15,7 +16,8 @@ import { ProductsComponent } from './products.component';
         ProductTotalPriceComponent,
         ProductItemComponent,
         ProductListComponent,
-        ProductsComponent
+        ProductsComponent,
+        CreateProductComponent
     ],
     exports:[ProductsComponent]
 })

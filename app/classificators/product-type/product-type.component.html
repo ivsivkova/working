@@ -1,4 +1,4 @@
-<create-product-type *ngIf="createView"></create-product-type>
+<create-product-type *ngIf="createView" (closeCreateProductType)='hideCreateProductType($event)'></create-product-type>
 <a href="#" (click)="createNewProductType($event)">Create New Product Type Classificator</a>
 <h1>This is supossed to be Product Type Classificators List</h1>
 <product-type-list [productsTypeList]="productTypes"></product-type-list>

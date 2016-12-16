@@ -1,4 +1,4 @@
-<create-brand *ngIf="createView"></create-brand>
+<create-brand *ngIf="createView" (closeCreateBrand)="hideCreateBrand($event)"></create-brand>
 <a href="#" (click)="createNewBrand($event)">Create New Brand</a>
 <h1>This si supposed to be Brand Classificator List</h1>
 <brand-list [brandsList]="brands"></brand-list>
