@@ -4,6 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Brand } from './../../../_models/brand.model';
 import { ProductNameModel } from './../../../_models/product-name.model';
 import { ProductTypeModel } from './../../../_models/product-type.model';
+import { Product } from './../../../_models/product.model';
 
 import { getBrandsService } from './../../../_services/getBrands.service';
 
@@ -19,6 +20,7 @@ export class CreateProductComponent {
     brandsArray: Brand[];
     productTypeArray: ProductTypeModel[];
     closeCreateProduct: EventEmitter<boolean> = new EventEmitter<boolean>();
+    newProduct:Product;
 
     constructor(
             private http:Http, 
@@ -36,9 +38,16 @@ export class CreateProductComponent {
 
         }
 
-    createProduct():void {
-        
-        this.closeCreateProduct.emit(false);
+    createProduct(pPI, quantity, productName, brand, productType):void {  
+        // make some checks and dislay messages depending on the error    
+        if ((pPI && pPI > 0) && (quantity && quantity > 0) && (productName && brand && productType)) {
+            this.newProduct = new Product(3,'icon', productName, brand, pPI, quantity, productType, new Date() );
+            console.log(this.newProduct);
+            this.closeCreateProduct.emit(false);
+        }
+        else {
+            alert('Please fill the required fields');
+        }
     }
     createProductClose():void {
         this.closeCreateProduct.emit(false);

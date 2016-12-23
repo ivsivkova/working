@@ -1,4 +1,9 @@
-<create-product *ngIf="createView" (closeCreateProduct)='hideCreateView($event)'></create-product>
-<a href="#" (click)="createProduct($event)">Create New Product</a>
-<h1>This is supposed to be Products List</h1>
+<div class="row">
+    <h1 class="col-md-12">Products</h1>
+</div>
+<div class="row">
+    <button type="button" (click)="createProduct($event)" class="text-center col-md-12 create-btn" data-toggle="modal" data-target="#createModal">Create New Product</button>
+</div>
 <product-list [productsList]="initialProducts"></product-list>
+
+<create-product *ngIf="createView" (closeCreateProduct)='hideCreateView($event)'></create-product>

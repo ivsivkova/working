@@ -6,6 +6,9 @@ import { ProductItemComponent } from './../product-item/product-item.component';
 @Component({
     selector: 'product-list',
     inputs: ['productsList'],
+    host: {
+        class: 'row'
+    },
     templateUrl: './../app/products/subcomponents/product-list/product-list.component.html'
 })
 

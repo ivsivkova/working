@@ -1,7 +1,7 @@
 [
     {
         "id":1, 
-        "icon": "http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png",
+        "icon": "/img/fresh-milk-box-white.png",
         "name": {
             "id":1,
             "name":"Milk" 
@@ -16,11 +16,11 @@
             "id": 1,
             "name": "Food"
         },
-        "date": "Tue Apr 26 2016 00:00:00 GMT+0300 (FLE Daylight Time)"
+        "date": "26.03.2015"
     },
     {
         "id":2, 
-        "icon": "http://icons.iconarchive.com/icons/icons8/android/512/Food-Vegeterian-Food-icon.png",
+        "icon": "/img/fresh-milk-box-white.png",
         "name": {
             "id":1,
             "name":"Milk" 
@@ -35,6 +35,6 @@
             "id": 1,
             "name": "Food"
         },
-        "date": "Tue Apr 26 2016 00:00:00 GMT+0300 (FLE Daylight Time)"
+        "date": "26.03.2015"
     }
 ]
